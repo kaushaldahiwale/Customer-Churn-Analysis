@@ -1,3 +1,4 @@
+
 # 📊 Customer Churn Analysis – Telco Subscription Service
 
 This project analyzes the Telco Customer Churn dataset to uncover key drivers of customer churn and suggest actionable strategies to improve retention. It includes a unique risk scoring heatmap based on tenure and billing patterns, offering deep insights into customer behavior.
@@ -63,30 +64,23 @@ pivot = df.pivot_table(index='TenureGroup', columns='ChargeGroup',
                        values='Churn', aggfunc=lambda x: (x=='Yes').mean(), observed=False)
 
 sns.heatmap(pivot, annot=True, cmap='YlOrRd', fmt=".2f")
+```
 
+---
 
-💡 Business Insights
+## 💡 Business Insights
 
-    High churn among new users with high monthly charges – likely due to pricing dissatisfaction.
+- High churn among new users with high monthly charges – likely due to pricing dissatisfaction.
+- Loyalty is higher in customers with longer tenure and lower billing.
+- Customers on month-to-month contracts churn more than those on longer-term plans.
+- Paper billing customers show higher churn – a push toward digital billing may help.
+- Upsell and retain mid-tenure, high-charge customers before they churn.
 
-    Loyalty is higher in customers with longer tenure and lower billing.
+---
 
-    Customers on month-to-month contracts churn more than those on longer-term plans.
+## ✅ Recommendations
 
-    Paper billing customers show higher churn – a push toward digital billing may help.
-
-    Upsell and retain mid-tenure, high-charge customers before they churn.
-
-✅ Recommendations
-
-    Launch retention offers for high-billing customers in their first 6 months.
-
-    Encourage switching to annual contracts with discounts.
-
-    Promote digital payments over paper billing.
-
-    Improve onboarding and support for fiber-optic and tech-heavy users.
-
-🏁 Conclusion
-
-This project demonstrates how data-driven analysis can uncover powerful insights in customer churn behavior. The combination of traditional EDA and a custom-built churn scoring heatmap equips telecom providers with actionable strategies to retain at-risk customers.
+- Launch retention offers for high-billing customers in their first 6 months.
+- Encourage switching to annual contracts with discounts.
+- Promote digital payments over paper billing.
+- Improve onboarding and support for fiber-optic and tech-heavy users.
